@@ -1,50 +1,50 @@
 ---
 # MIOP terms
 methodology_category: Omics Analysis
-project: NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program Protocols
-purpose: PCR [OBI:0000415], Library Preparation [OBI:0000711]
-analyses: PCR [OBI:0000415], Library Preparation [OBI:0000711]
-geographic_location: North East Pacific Ocean [GAZ:00013765], Bering Sea [GAZ:00008990], Arctic Ocean [GAZ:00000323]
-broad_scale_environmental_context: marine biome [ENVO:00000447], marine photic zone [ENVO:00000209]
-local_environmental_context: oceanic epipelagic zone biome [ENVO:01000035], marine biome [ENVO:00000447], marine benthic biome [ENVO:01000024]
-environmental_medium: sea water [ENVO:00002149], polymerase chain reaction [OBI:0000415]
-target: amplicon sequencing assay [OBI_0002767]
-creator: Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister
-materials_required: vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]
-skills_required: sterile technique, pipetting skills, standard molecular technique
-time_required: 
+project: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program Protocols'
+purpose: 'PCR [OBI:0000415], Library Preparation [OBI:0000711]'
+analyses: 'PCR [OBI:0000415], Library Preparation [OBI:0000711]'
+geographic_location: 'North East Pacific Ocean [GAZ:00013765], Bering Sea [GAZ:00008990], Arctic Ocean [GAZ:00000323]'
+broad_scale_environmental_context: 'marine biome [ENVO:00000447], marine photic zone [ENVO:00000209]'
+local_environmental_context: 'oceanic epipelagic zone biome [ENVO:01000035], marine biome [ENVO:00000447], marine benthic biome [ENVO:01000024]'
+environmental_medium: 'sea water [ENVO:00002149], polymerase chain reaction [OBI:0000415]'
+target: 'amplicon sequencing assay [OBI_0002767]'
+creator: 'Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister'
+materials_required: 'vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]'
+skills_required: 'sterile technique, pipetting skills, standard molecular technique'
+time_required: '1 day'
 personnel_required: 1
 language: en
-issued: 2025-05-01
+issued: '2025-05-01'
 audience: scientists
-publisher: NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies
+publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
 hasVersion: 1
-license: CC0 1.0 Universal
+license: 'CC0 1.0 Universal'
 maturity level: mature
 
 # FAIRe terms
-barcoding_pcr_appr: two-step pcr
+barcoding_pcr_appr: 'two-step pcr'
 pcr2_amplificationReactionVolume: 50
-pcr2_commercial_mm: 2x KAPA HiFi HotStart ReadyMix
+pcr2_commercial_mm: '2x KAPA HiFi HotStart ReadyMix'
 pcr2_dna_vol: 5
-pcr2_cond: initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8
+pcr2_cond: 'initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8'
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
-pcr2_method_additional: Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
-sequencing_location: Oregon State University Center for Quantitative Life Sciences Genomics Core
+pcr2_method_additional: 'Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
+sequencing_location: Oregon State University Center for Quantitative Life Sciences Genomics Core'
 platform: ILLUMINA
 instrument: Illumina MiSeq
-seq_kit: Illumina MiSeq Reagent Kit v.3 (600-cycle) (cat_no:MS-102-3003)
+seq_kit: 'Illumina MiSeq Reagent Kit v.3 (600-cycle) (Cat_No:MS-102-3003)'
 lib_layout: paired end
-lib_screen: The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the
-Illumina MiSeq System" purified using a Ampure XP Bead Amplicon Clean Up prior to pcr2, a Ampure XP Bead Amplicon Clean Up after pcr2, normalized by measuring DNA concentration via Qubit Fluorometric Quantification (Invitrogen) using Broad Range chemistry (cat_no:Q33265) and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.
+lib_screen: 'The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit Fluorometric Quantification (ThermoFisher Scientific) using Broad Range chemistry (Cat_No:Q33265) and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 8
 lib_conc_unit: pM
 lib_conc_meth: Qubit
 phix_perc: 10
-seq_method_additional: PhiX was spiked in at 10%
+seq_method_additional: 'PhiX was spiked in at 10%'
+
 ---
 
 # NOAA PMEL OME Oregon State University Metabarcoding Library Preparation Protocol 
@@ -54,7 +54,7 @@ seq_method_additional: PhiX was spiked in at 10%
 ### Minimum Information about an Omics Protocol (MIOP)
 
 - MIOP terms are listed in the YAML frontmatter of this page.
-- See <https://github.com/BeBOP-OBON/miop/blob/main/model/schema/terms.yaml> for list and definitions.
+- See <https://github.com/BeBOP-OBON/miop/blob/main/model/schema/terms.yaml> for the list and definitions.
 
 ### Making eDNA FAIR (FAIRe)
 
