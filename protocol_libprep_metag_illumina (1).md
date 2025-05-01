@@ -36,8 +36,7 @@ platform: ILLUMINA
 instrument: Illumina MiSeq
 seq_kit: Illumina MiSeq Reagent Kit v.3 (600-cycle) (Cat_No:MS-102-3003)
 lib_layout: paired end
-lib_screen: The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the
-Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit Fluorometric Quantification (ThermoFisher Scientific) using Broad Range chemistry (Cat_No:Q33265) and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.
+lib_screen: The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit Fluorometric Quantification (ThermoFisher Scientific) using Broad Range chemistry (Cat_No:Q33265) and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 8
