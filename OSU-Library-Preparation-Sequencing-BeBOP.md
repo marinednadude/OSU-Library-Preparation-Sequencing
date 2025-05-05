@@ -333,7 +333,7 @@ This is a safe stopping point. Plate can be sealed and stored at ‐20°C for up
 ##### Quality control
 No quality control is conducted.
 
-#### Library Quantification, Normalization and Pooling 
+#### Library Quantification, Normalization, Pooling, and Final Size Selection 
 
 ##### Library Quantification
 
@@ -349,8 +349,15 @@ No quality control is conducted.
 	15ng/µL/(660 g/mol * 500 bp) = 45 nM
 
 2. Dilute library in Resupension Bugger or 10 mM Tris pH 8.5 to 4nM
-3. Pool 5 µL of each uniquely tagged library into microcentrifuge tube for final cleaned pool.
-4. Vortex and spin.
+
+##### Pooling
+
+1. Pool 5 µL of each uniquely tagged library into microcentrifuge tube for final cleaned pool.
+2. Vortex and spin.
+
+##### Final Size Selection
+
+1. The Machida marker resulted in primer dimer (shorter 170bp peak) with main target ~500bp. From NorsemanWOAC_Pool1 (OSU876/OSU1034, DY20-12 cruise), primer dimer was removed using a by BluePippin size selection. For Norseman18S Pool2 (OSU1089, NO20-01 cruise) and Axial 2020 cruise an additional AMPure XP magnetic bead cleanup was conducted instead utilizing the entire pool (See above).
 
 ##### Quality control
 For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically on a perfect MiSeq run up to 125 samples for a single marker could be sequenced at once.
@@ -393,7 +400,7 @@ Sample library pools were the denatured and sequenced on an Illumina MiSeq (San 
 3. Incubate at 96˚C for 2 minutes. Only start this step when ready to run the flow cell.
 4. Mix by inverting and place into ice water bath
 5. Incubate in ice-water bath for 5 minutes
-6. 
+
 
 
 ##### Quality Control
