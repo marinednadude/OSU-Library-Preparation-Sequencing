@@ -126,7 +126,7 @@ This protocol is used by [Oregon State University Center for Quantitative Life S
 
 ### Method description and rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, and Pooling_, and _Sequencing_. 
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. 
 For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted DNA extractions and PCR amplification prior to this protocol ((See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and PCR amplified (separate BeBOP protocols) and then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then again cleaned using an Ampure XP bead cleanup protocol. Cleaned PCR2 product is then quantified via QuBit BR flurometry and then normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 This protocol is less detailed than our typical protocols, as we do not conduct this protocol ourselves. However, we capture the necessary [FAIRe](https://fair-edna.github.io/) relevant information.
@@ -333,7 +333,7 @@ This is a safe stopping point. Plates can be sealed and stored at ‐20°C for u
 ##### Quality control
 No quality control is conducted.
 
-#### Library Quantification, Normalization, and Pooling 
+#### Library Quantification, Normalization, Pooling, and Final Size Selection 
 
 ##### Library Quantification
 
@@ -349,8 +349,18 @@ No quality control is conducted.
 	15ng/µL/(660 g/mol * 500 bp) = 45 nM
 
 2. Dilute library in Resupension Bugger or 10 mM Tris pH 8.5 to 4nM
-3. Pool 5 µL of each uniquely tagged library into a microcentrifuge tube for the final cleaned pool.
-4. Vortex and spin.
+
+##### Pooling
+
+1. Pool 5 µL of each uniquely tagged library into microcentrifuge tube for final cleaned pool.
+2. Vortex and spin.
+
+##### Final Size Selection
+
+1. The Machida marker resulted in primer dimer (shorter 170bp peak) with main target ~500bp. From NorsemanWOAC_Pool1 (OSU876/OSU1034, DY20-12 cruise), primer dimer was removed using a by BluePippin size selection. For Norseman18S Pool2 (OSU1089, NO20-01 cruise) and Axial 2020 cruise an additional AMPure XP magnetic bead cleanup was conducted instead utilizing the entire pool (See above).
+
+##### Quality control
+For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically on a perfect MiSeq run up to 125 samples for a single marker could be sequenced at once.
 
 ##### Quality control
 For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically, on a perfect MiSeq run up to 125 samples for a single marker could be sequenced at once.
@@ -393,7 +403,6 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 3. Incubate at 96˚C for 2 minutes. Only start this step when ready to run the flow cell.
 4. Mix by inverting and place into the ice-water bath
 5. Incubate in ice-water bath for 5 minutes
-6. 
 
 
 ##### Quality Control
