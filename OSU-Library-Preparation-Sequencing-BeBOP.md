@@ -30,6 +30,9 @@ pcr2_dna_vol: 5
 pcr2_cond: 'initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8'
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
+pcr2_analysis_software: 'missing: not collected'
+pcr2_plate_id: 'missing: not collected'
+pcr2_method_additional: 'missing: not collected'
 pcr2_method_additional: 'Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
 sequencing_location: Oregon State University Center for Quantitative Life Sciences Genomics Core'
 platform: ILLUMINA
@@ -43,6 +46,7 @@ lib_conc: 8
 lib_conc_unit: pM
 lib_conc_meth: Qubit
 phix_perc: 10
+checksum_method: linux md5sum
 seq_method_additional: 'PhiX was spiked in at 10%'
 
 ---
