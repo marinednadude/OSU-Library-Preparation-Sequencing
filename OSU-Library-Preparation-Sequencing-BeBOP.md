@@ -33,8 +33,8 @@ pcr2_cycles: 8
 pcr2_analysis_software: 'missing: not collected'
 pcr2_plate_id: 'missing: not collected'
 pcr2_method_additional: 'missing: not collected'
-pcr2_method_additional: 'Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
-sequencing_location: Oregon State University Center for Quantitative Life Sciences Genomics Core'
+pcr2_method_additional: 'Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.'
+sequencing_location: 'Oregon State University Center for Quantitative Life Sciences Genomics Core'
 platform: ILLUMINA
 instrument: Illumina MiSeq
 seq_kit: 'Illumina MiSeq Reagent Kit v.3 (600-cycle) (Cat_No:MS-102-3003)'
