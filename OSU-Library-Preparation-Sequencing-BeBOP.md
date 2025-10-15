@@ -9,7 +9,7 @@ broad_scale_environmental_context: 'marine biome [ENVO:00000447], marine photic 
 local_environmental_context: 'oceanic epipelagic zone biome [ENVO:01000035], marine biome [ENVO:00000447], marine benthic biome [ENVO:01000024]'
 environmental_medium: 'sea water [ENVO:00002149], polymerase chain reaction [OBI:0000415]'
 target: 'amplicon sequencing assay [OBI_0002767]'
-creator: 'Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister'
+creator: 'Shannon Brown, Han Weinrich, Samantha Setta, Zachary Gold, Sean McAllister'
 materials_required: 'vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]'
 skills_required: 'sterile technique, pipetting skills, standard molecular technique'
 time_required: '1 day'
@@ -17,7 +17,7 @@ personnel_required: 1
 language: en
 issued: '2025-05-01'
 audience: scientists
-publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
+publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
 hasVersion: 1
 license: 'CC0 1.0 Universal'
 maturity level: mature
@@ -70,10 +70,11 @@ seq_method_additional: 'PhiX was spiked in at 10%'
 
 | PREPARED BY | AFFILIATION | ORCID | DATE |
 | ------------- | ------------- | ------------- | ------------- |
-|Zachary Gold	|Ocean Molecular Ecology, NOAA PMEL	|<http://orcid.org/0000-0003-0490-7630>	|2025-05-01|
-| Shannon Brown | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <https://orcid.org/0000-0001-9808-2638>|2025-05-01|
-| Han Weinrich  | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <http://orcid.org/0009-0007-6063-0986>|2025-05-01|
-|Sean McAllister	|Ocean Molecular Ecology, NOAA PMEL & UW CICOES	|<http://orcid.org/0000-0001-6654-3495>|2025-05-01|
+| Zachary Gold |Ocean Molecular Ecology, NOAA PMEL	|<http://orcid.org/0000-0003-0490-7630>	|2025-05-01|
+| Shannon Brown| Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <https://orcid.org/0000-0001-9808-2638>|2025-05-01|
+| Han Weinrich | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <http://orcid.org/0009-0007-6063-0986>|2025-05-01|
+| Sean McAllister |Ocean Molecular Ecology, NOAA PMEL & UW CICOES	|<http://orcid.org/0000-0001-6654-3495>|2025-05-01|
+| Samantha Setta | Ocean Molecular Ecology, NOAA PMEL & UW CICOES |<https://orcid.org/0000-0001-9075-7573>|2025-10-01|
 
 ## RELATED PROTOCOLS
 
@@ -131,7 +132,7 @@ This protocol is used by [Oregon State University Center for Quantitative Life S
 ### Method description and rationale
 
 Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. 
-For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted DNA extractions and PCR amplification prior to this protocol ((See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and PCR amplified (separate BeBOP protocols) and then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then again cleaned using an Ampure XP bead cleanup protocol. Cleaned PCR2 product is then quantified via QuBit BR flurometry and then normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted DNA extractions and PCR amplification prior to this protocol ((See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and PCR amplified (separate BeBOP protocols) and then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then again cleaned using an Ampure XP bead cleanup protocol. Cleaned PCR2 product is then quantified via QuBit BR flurometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 This protocol is less detailed than our typical protocols, as we do not conduct this protocol ourselves. However, we capture the necessary [FAIRe](https://fair-edna.github.io/) relevant information.
 
@@ -250,7 +251,7 @@ Index Kit.
 
 #### Procedure
 
-1. The indexing PCR included P2x KAPA HiFi HotStart ReadyMix, 5 µL Illumina Nextera XT Index Primer 1 (F, N7XX), 5 µL Illumina Nextera XT Index Primer 2 (S5XX), 5 µl of template DNA (cleaned amplicon from the first PCR reaction), and 10 µL PCR Grade Water for a total volume of 50 µL.
+1. The indexing PCR included 25 µL 2x KAPA HiFi HotStart ReadyMix, 5 µL Illumina Nextera XT Index Primer 1 (F, N7XX), 5 µL Illumina Nextera XT Index Primer 2 (S5XX), 5 µl of template DNA (cleaned amplicon from the first PCR reaction), and 10 µL PCR Grade Water for a total volume of 50 µL.
 2.  Thermocycling conditions consisted of an initial denaturation of 95 °C for 3 minutes, followed by 8 cycles of  95 °C for 30 sec, 55 °C for 30 seconds, and 72 °C for 30 seconds, followed by a final extension of 72˚C for 5 minutes, and a hold at 4˚C. 
 
 **Primer Sequences Used**: Illumina Nextera XT primer sequences
@@ -352,7 +353,7 @@ No quality control is conducted.
 	Example:
 	15ng/µL/(660 g/mol * 500 bp) = 45 nM
 
-2. Dilute library in Resupension Bugger or 10 mM Tris pH 8.5 to 4nM
+2. Dilute library in Resupension Buffer or 10 mM Tris pH 8.5 to 4nM
 
 ##### Pooling
 
@@ -381,7 +382,7 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 ##### Denature DNA
 1. Mix 4 nM pooled library (5 μl) 0.2 N NaOH (5 μl) in new microcentrifuge tube.
 2. Set aside the remaining 0.2 N NaOH dilution for PhiX. (Use within 12 hours)
-3. Briefly vortex briefly sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
+3. Briefly vortex sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
 4. Incubate on benchtop for 5 minutes.
 5. Combine 10µL Denatured DNA with 990 µL pre-chilled HT1 buffer to generate a 20 pM denatured library in 1mM NAOH.
 6. Place denatured DNA on ice.
