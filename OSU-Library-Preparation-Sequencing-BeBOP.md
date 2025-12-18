@@ -173,8 +173,6 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Serological Pipette | Eppendorf Easypet 3 Pipette | Eppendorf | 1 | Can be substituted with any accurate pipette |
 | Ice Bucket | Generic | Generic | 1 | |
 | QuBit Flurometer | Flurometric DNA quantification device | ThermoFisher Scientific | 1 | Can be substituted with generic fluorometric quantitation with dsDNA binding dye reagents |
-
-
 | **Consumable equipment** |
 | 96-well PCR plate | Armadillo PCR Plate, 96-well, clear, clear wells | ThermoFisher | 1 | Can be substituted with generic |
 | Aluminum Foil Sealing Tape | AlumaSeal II Sealing Foils for PCR and Cold Storage | VWR | 7 | Can be substituted with generic | 
