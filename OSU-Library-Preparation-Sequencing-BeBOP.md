@@ -48,6 +48,8 @@ lib_conc_meth: Qubit
 phix_perc: 10
 checksum_method: linux md5sum
 seq_method_additional: 'PhiX was spiked in at 10%'
+demux_tool: 'Illumina Bcl2fastq'
+demux_max_mismatch: '0'
 
 ---
 
