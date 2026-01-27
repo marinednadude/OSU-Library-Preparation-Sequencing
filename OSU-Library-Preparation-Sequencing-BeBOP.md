@@ -104,16 +104,15 @@ demux_max_mismatch: '0'
 
 | ACRONYM / ABBREVIATION | DEFINITION |
 | ------------- | ------------- |
+|ASV	|Amplicon Sequence Variant|
 |BSC	|Biosafety cabinet|
 |CICOES| Cooperative Institute for Climate, Ocean, & Ecosystem Studies|
 |DNA	|Deoxyribonucleic acid|
 |dNTP	|deoxynucleotide triphosphate|
 |eDNA	|environmental DNA|
 |EtOH| Ethanol|
-|IDT| Integrated DNA Technologies|
 |HT1| Hybridization buffer|
 |NOAA|National Oceanic and Atmospheric Administration|
-|NTC|No template control|
 |OME	|Ocean Molecular Ecology|
 |OSU CQLS| Oregon State University Center for Quantitative Life Sciences Genomics Core|
 |PCR| Polymerase chain reaction |
@@ -127,8 +126,10 @@ demux_max_mismatch: '0'
 
 | SPECIALISED TERM | DEFINITION |
 | ------------- | ------------- |
-| No template control | PCR negative control. Typically, nuclease-free water is loaded in place of a sample on a PCR to control for contamination in the PCR step. |
-| Positive control  | PCR positive control. Typically, a synthetic DNA strand, non-indigenous DNA extract, or intentionally designed mock community is loaded in place of a sample on a PCR to control for contamination and index hopping in the PCR step. |
+| Index hopping | A phenomenon where indices are incorrectly assigned to the wrong library during sequencing, often mitigated by the UDIs (Unique Dual Indexes) mentioned in your protocol. |
+| Primer dimer | An undesired PCR byproduct consisting of primer molecules that have hybridized to each other; removed during the AMPure XP cleanup steps.|
+| PhiX control | A small, well-defined genome (from the PhiX 174 bacteriophage) added to the sequencing run to provide a calibration standard and to increase sequence diversity. |
+| Library |A collection of DNA fragments that have been prepared (cleaned, indexed, and adapter-ligated) for sequencing.|
 
 ## BACKGROUND
 
@@ -138,7 +139,7 @@ This protocol is used by [Oregon State University Center for Quantitative Life S
 
 ### Method Description and Rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using an Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR flurometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using an Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 ### Spatial Coverage and Environment(s) of Relevance
 
@@ -190,14 +191,15 @@ For a 96-well plate:
 | Gloves | Nitrile gloves | Generic | 1 box | |
 | Kimwipes | Delicate task wipes | KimTech | 1 box | Can be substituted with generic; must be lint-free. |
 | **Chemicals** |
-| 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
-| PCR grade water| Molecular biology grade water |
-| 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
 | AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 40 μl per plate | |
+| 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
+| 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
+| 2x KAPA HiFi HotStart ReadyMix | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer | Roche | 2600 μl per plate | |
 | Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μl per plate||
+| Forward primer | Custom oligo | IDT |520 μl per plate | Store at -20°C|
+| Reverse primer| Custom oligo | IDT | 520 μl per plate| Store at -20°C |
+| Qubit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
 | Illumina XT Indexes Sets A, B, C, D | Illumina Nextera XT Indexes| Illumina | 1 | Nextera XT Index Kit v2 Set A (96 Indexes, 384 Samples) FC-131-2001; Nextera XT Index Kit v2 Set B (96 Indexes, 384 Samples) FC-131-2002; Nextera XT Index Kit v2 Set C (96 Indexes, 96 Samples) FC-131-2003; Nextera XT Index Kit v2 Set D (96 Indexes, 384 Samples) FC-131-2004 |
-| 2x KAPA HiFi HotStart ReadyMix | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer | Roche | 1 kit | |
-| Qybit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
 | MiSeq Reagent Kit v.3 (600-cycle) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System | Illumina | 1 flow cell | |
 | PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 tube | |
 | 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 10 μl per plate|  |
@@ -229,14 +231,14 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 9. Keep PCR1 plate on the magnetic plate and add 200 µl of freshly prepared 80% EtOH to each sample well using a multichannel pipette.
 10. Incubate on magnetic plate for 30 seconds.
 11. Carefully remove and discard the EtOH supernatant.
-10. Repeat steps 9-11, performing a second ethanol wash.
-11. Use a P20 multichannel pipette with fine pipette tips to remove excess EtOH.
-11. Air‐dry samples for 10 minutes, keeping the PCR1 plate on the magnetic bead stand.
-12. Remove the PCR1 plate from the magnetic stand and then add 52.5 µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
-13. Mix by aspirating and expelling 10 times.
-14. Incubate on lab bench for 2 minutes.
-15. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
-16. Transfer 50 µl of the supernatant from the PCR1 plate to a new labeled 96‐well PCR plate.
+12.  Repeat steps 9-11, performing a second ethanol wash.
+13. Use a P20 multichannel pipette with fine pipette tips to remove excess EtOH.
+14. Air‐dry samples for 10 minutes, keeping the PCR1 plate on the magnetic bead stand.
+15. Remove the PCR1 plate from the magnetic stand and then add 52.5 µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
+16. Mix by aspirating and expelling 10 times.
+17. Incubate on lab bench for 2 minutes.
+18. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
+19. Transfer 50 µl of the supernatant from the PCR1 plate to a new labeled 96‐well PCR plate.
 
 This is a safe stopping point. Plates can be sealed and stored at 4°C for up to a week.
 
@@ -326,9 +328,9 @@ This is a safe stopping point. Plates can be sealed and stored at ‐20°C for u
 	Example:
 	15ng/µL/(660 g/mol * 500 bp) = 45 nM
 
-3. Dilute library in Resuspension buffer or 10 mM Tris pH 8.5 to 4 nM.
+3. Dilute library in resuspension buffer (RSB) or 10 mM Tris pH 8.5 to 4 nM.
 
-**Pooling and size selection**
+**Pooling and Size Selection**
 
 1. Pool 5 µL of each uniquely tagged library into microcentrifuge tube for final cleaned pool. Vortex and spin.
 
@@ -347,11 +349,11 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 3. Create ice-water bath using 3:1 ice to water ratio.
 
 ##### Denature DNA
-1. Mix 4 nM pooled library (5 μl) 0.2 N NaOH (5 μl) in new microcentrifuge tube.
+1. Mix 5 µL of 4 nM pooled library with 5 µL 0.2 N NaOH in new microcentrifuge tube.
 2. Set aside the remaining 0.2 N NaOH dilution for PhiX. (Use within 12 hours)
 3. Briefly vortex sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
-4. Incubate on benchtop for 5 minutes.
-5. Combine 10 µL Denatured DNA with 990 µL pre-chilled HT1 buffer to generate a 20 pM denatured library in 1mM NAOH.
+4. Incubate at room temperature for 5 minutes.
+5. Combine 10 µL Denatured DNA with 990 µL pre-chilled Hybridization buffer (HT1) to generate a 20 pM denatured library in 1mM NAOH.
 6. Place denatured DNA on ice.
 
 ##### Dilute Denatured DNA
@@ -363,8 +365,8 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 1. Add 2 μl 10 nM PhiX library to 3 µL 10 mM Tris pH 8.5 in a new microcentrifuge tube to make a 4nM PhiX library
 2. Add 5 µL 4 nM PhiX library to 5µL 0.2 N NaOH to make a 2 nM PhiX library solution
 3. Briefly vortex and spin
-4. Incubate on benchtop for 5 minutes.
-5. Combine 10µL Denatured PhiX with 990 µL pre-chilled HT1 buffer to generate a 20 pM denatured PhiX library in 1 mM NaOH.
+4. Incubate at room temperature for 5 minutes.
+5. Combine 10µL denatured PhiX with 990 µL pre-chilled HT1 to generate a 20 pM denatured PhiX library in 1 mM NaOH.
 6. Add 240 µL 20 pM denatured PhiX library to 360 µL pre-chilled HT1 to make 8 pM final concentration denatured PhiX library.
 7. Briefly mix (flick/tap/invert) and spin the sample.
 8. Place the final denatured library on ice.
