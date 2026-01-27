@@ -23,7 +23,7 @@ license: 'CC0 1.0 Universal'
 maturity level: mature
 
 # FAIRe terms
-barcoding_pcr_appr: 'two-step pcr'
+barcoding_pcr_appr: 'two-step PCR'
 pcr2_amplificationReactionVolume: 50
 pcr2_commercial_mm: '2x KAPA HiFi HotStart ReadyMix'
 pcr2_dna_vol: 5
@@ -39,7 +39,7 @@ platform: ILLUMINA
 instrument: Illumina MiSeq
 seq_kit: 'Illumina MiSeq Reagent Kit v.3 (600-cycle) (Cat_No:MS-102-3003)'
 lib_layout: paired end
-lib_screen: 'The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit using Broad Range chemistry and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.'
+lib_screen: Post-amplification screening and purification included two rounds of AMPure XP bead clean-up. Final library quality control was performed by Qubit quantification. Samples were normalized by pooling equal DNA product and diluted to a final loading concentration of 8 pM for sequencing on the MiSeq.
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 8
@@ -135,11 +135,11 @@ demux_max_mismatch: '0'
 
 ### Summary
 
-This protocol is used by [Oregon State University Center for Quantitative Life Sciences Genomics Core](https://cqls.oregonstate.edu/core/genomics) to prepare next-generation amplicon/metabarcoding sequencing libraries from OSU CQLS generated PCR products. This standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple samples, enabling 96 total libraries to be sequenced on a single MiSeq run.
+This protocol is used by [Oregon State University Center for Quantitative Life Sciences Genomics Core](https://cqls.oregonstate.edu/core/genomics) to prepare next-generation amplicon/metabarcoding sequencing libraries from OSU CQLS-generated PCR products. This standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple samples, enabling 96 total libraries to be sequenced on a single MiSeq run.
 
 ### Method Description and Rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using an Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 ### Spatial Coverage and Environment(s) of Relevance
 
@@ -218,7 +218,7 @@ For a 96-well plate:
 5. Label all microcentrifuge tubes both on the side and on the top of the tube. Recommended labeling scheme includes library name or reagent, date of PCR, and personnel initials.
 
 #### PCR1 Amplicon Cleanup
-Before starting this procedure, remove the AMPure XP beads from the fridge and allow to warm to room temperature. Amplicons were then cleaned by AMPure XP beads to purify the amplicon away from free primers and primer dimer species following the Illumina 16S Preparation Guide instructions:
+Before starting this procedure, remove the AMPure XP beads from the fridge and allow them to warm to room temperature. Amplicons were then cleaned by AMPure XP beads to purify the amplicon away from free primers and primer dimer species following the Illumina 16S Preparation Guide instructions:
 
 1. Centrifuge PCR1 plate at 1,000 × g at 20°C for 1 minute.
 3. Vortex AMPure XP beads for 30 seconds. 
@@ -236,7 +236,7 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 14. Air‐dry samples for 10 minutes, keeping the PCR1 plate on the magnetic bead stand.
 15. Remove the PCR1 plate from the magnetic stand and then add 52.5 µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
 16. Mix by aspirating and expelling 10 times.
-17. Incubate on lab bench for 2 minutes.
+17. Incubate at room temperature for 2 minutes.
 18. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
 19. Transfer 50 µl of the supernatant from the PCR1 plate to a new labeled 96‐well PCR plate.
 
@@ -253,7 +253,7 @@ This step attaches dual indices and Illumina sequencing adapters using the Nexte
 | Illumina-Nextera-XT-PCR-F Index 1 (i7) Adapters | forward | CAAGCAGAAGACGGCATACGAGAT-[**i7**]-GTCTCGTGGGCTCGG |
 | Illumina-Nextera-XT-PCR-R Index 2 (i5) Adapters| reverse | AATGATACGGCGACCACCGAGATCTACAC-[**i5**]-TCGTCGGCAGCGTC|
 
-**Reaction Mixture**: PCR reagents, volumes, inital and final concentrations
+**Reaction Mixture**: PCR reagents, volumes, initial and final concentrations
 
 | Reagent |Volume (μL) per plate| Volume (μL) per reaction | Intial concentration| Final concentration|
 | ----- | ----- | ----- |----- |----- |
@@ -280,11 +280,11 @@ This table breaks down the mixture per plate and per reaction. When running full
 
 **Step-by-Step Instructions:**
 
-*Note: When possible, PCR set-up should be carried out in a separate pre-PCR space that is distinct from where the post-PCR space where thermocyclers are located and all post-PCR processing is performed. No equipment, consumables, or reagents should be shared between pre- and post-PCR spaces with a unidirectional flow of sample processing. This step is post-PCR and thus should occur in the post-PCR spaces.*
+*Note: When possible, PCR set-up should be carried out in a separate pre-PCR space that is distinct from the post-PCR space where thermocyclers are located and all post-PCR processing is performed. No equipment, consumables, or reagents should be shared between pre- and post-PCR spaces with a unidirectional flow of sample processing. This step is post-PCR and thus should occur in the post-PCR spaces.*
 
 1. Set out Illumina Nextera XT primers and samples to thaw.
 2. Vortex and spin down thawed samples, primers, and nuclease-free water. Then tap/flick Kapa Master Mix rather than vortexing before spinning down. Thawed reagents should be stored in a cooling block or fridge when not in use.
-3. Pool reagents to make final master mix, as denoted above in the reagent mixture table.
+3. Pool reagents to make the final master mix, as denoted above in the reagent mixture table.
 4. Set out the template DNA to thaw if frozen.
 5. Aliquot 45 μL of final master mix into each well of the PCR plate. The plate should sit in a cold block to ensure the reagents remain at a low temperature.
 6. Add 5 μL DNA template to each well.
@@ -293,7 +293,7 @@ This table breaks down the mixture per plate and per reaction. When running full
 10.  Run thermocycler protocol.
 
 #### PCR2 Amplicon Cleanup
-Before starting this procedure, remove the AMPure XP beads from the fridge and allow to warm to room temperature. Amplicons were then cleaned by AMPure XP beads to purify the amplicon away from free primers and primer dimer species following the Illumina 16S Preparation Guide instructions:
+Before starting this procedure, remove the AMPure XP beads from the fridge and allow them to warm to room temperature. Amplicons were then cleaned by AMPure XP beads to purify the amplicon away from free primers and primer dimer species following the Illumina 16S Preparation Guide instructions:
 
 1. Centrifuge PCR2 plate at 1,000 × g at 20°C for 1 minute.
 3. Vortex AMPure XP beads for 30 seconds. 
@@ -306,12 +306,12 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 9. Keep PCR2 plate on the magnetic plate and add 200 µl of freshly prepared 80% ethanol to each sample well using a multichannel pipette.
 10. Incubate on magnetic plate for 30 seconds.
 11. Carefully remove and discard the ethanol supernatant.
-10. Repeat steps 9-11 performing a second ethanol wash.
+10. Repeat steps 9-11, performing a second ethanol wash.
 11. Use a P20 multichannel pipette with fine pipette tips to remove excess ethanol.
 11. Air‐dry samples for 10 minutes, keeping the PCR2 plate on the magnetic bead stand.
 12. Remove the PCR2 plate from the magnetic stand and then add **27.5** µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
 13. Mix by aspirating and expelling 10 times.
-14. Incubate on lab bench for 2 minutes.
+14. Incubate at room temperature for 2 minutes.
 15. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
 16. Transfer 50 µl of the supernatant from the PCR2 plate to a new labeled 96‐well PCR plate.
 
@@ -332,26 +332,26 @@ This is a safe stopping point. Plates can be sealed and stored at ‐20°C for u
 
 **Pooling and Size Selection**
 
-1. Pool 5 µL of each uniquely tagged library into microcentrifuge tube for final cleaned pool. Vortex and spin.
+1. Pool 5 µL of each uniquely tagged library into a microcentrifuge tube for the final cleaned pool. Vortex and spin.
 
 The Machida marker resulted in primer dimer (shorter 170bp peak) with main target ~500bp. From NorsemanWOAC_Pool1 (OSU876/OSU1034, DY20-12 cruise), primer dimer was removed with a by BluePippin size selection. For Norseman18S Pool2 (OSU1089, NO20-01 cruise) and Axial 2020 cruise, an additional AMPure XP magnetic bead cleanup was conducted instead of utilizing the entire pool (See above).
 
 ### Quality control
-For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically on a perfect MiSeq run up to 125 samples for a single marker could be sequenced at once.
+For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically, on a perfect MiSeq run, up to 125 samples for a single marker could be sequenced at once.
 
 ### Sequencing
 
 Sample library pools were denatured and sequenced on an Illumina MiSeq (San Diego, CA) at OSU CDLS using the Illumina MiSeq Reagent Kit v.3 (600-cycle) following the "Illumina 16S Metagenomic Sequencing Library Preparation" guide. Specifically, libraries were diluted to 8 pM and run with 10% PhiX.
 
 ##### Preparation
-1. Turn on heat block and set to 96°C.
-2. Thaw MiSeq reagent cartridge at room temperature.
-3. Create ice-water bath using 3:1 ice to water ratio.
+1. Turn on the heat block and set it to 96°C.
+2. Thaw the MiSeq reagent cartridge at room temperature.
+3. Create an ice-water bath using a 3:1 ice-to-water ratio.
 
 ##### Denature DNA
-1. Mix 5 µL of 4 nM pooled library with 5 µL 0.2 N NaOH in new microcentrifuge tube.
+1. Mix 5 µL of 4 nM pooled library with 5 µL 0.2 N NaOH in a new microcentrifuge tube.
 2. Set aside the remaining 0.2 N NaOH dilution for PhiX. (Use within 12 hours)
-3. Briefly vortex sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
+3. Briefly vortex the sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
 4. Incubate at room temperature for 5 minutes.
 5. Combine 10 µL Denatured DNA with 990 µL pre-chilled Hybridization buffer (HT1) to generate a 20 pM denatured library in 1mM NAOH.
 6. Place denatured DNA on ice.
@@ -380,9 +380,9 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 
 ### Basic Troubleshooting Guide
 
-- Use a unique index for each sample. Multiple different markers (e.g. MiFish Teleost 12S, 16S Universal Parada, Leray CO1) from different PCRs can be pooled together for sequencing. Similar markers (e.g. MiFish Elasmobranch 12S and Teleost 12S) will be difficult to disentangle bioinformatically.
+- Use a unique index for each sample. Multiple different markers (e.g., MiFish Teleost 12S, 16S Universal Parada, Leray CO1) from different PCRs can be pooled together for sequencing. Similar markers (e.g., MiFish Elasmobranch 12S and Teleost 12S) will be difficult to disentangle bioinformatically.
 - See the _16S Metagenomic Sequencing Library Preparation
 Preparing: 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System_ for detailed recommendations and advanced troubleshooting.
 
 ## REFERENCES
-1. Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16s metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
+1. Amplicon, P. C. R., Clean-Up, P. C. R., & Index, P. C. R. (2013). 16S metagenomic sequencing library preparation. Illumina: San Diego, CA, USA, 21.
