@@ -15,10 +15,10 @@ skills_required: 'sterile technique, pipetting skills, standard molecular techni
 time_required: 300
 personnel_required: 1
 language: en
-issued: '2026-01-26'
+issued: '2026-01-27'
 audience: scientists
 publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
-hasVersion: 1.1.0
+hasVersion: 1.0.0
 license: 'CC0 1.0 Universal'
 maturity level: mature
 
@@ -39,7 +39,7 @@ platform: ILLUMINA
 instrument: Illumina MiSeq
 seq_kit: 'Illumina MiSeq Reagent Kit v.3 (600-cycle) (Cat_No:MS-102-3003)'
 lib_layout: paired end
-lib_screen: 'The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit Fluorometric Quantification (ThermoFisher Scientific) using Broad Range chemistry (Cat_No:Q33265) and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.'
+lib_screen: 'The library was prepared following the "16S Metagenomic Sequencing Library Preparation: Preparing 16S Ribosomal RNA Gene Amplicons for the Illumina MiSeq System" purified using an Ampure XP Bead Amplicon Clean Up before PCR2, an Ampure XP Bead Amplicon Clean Up after PCR2, normalized by measuring DNA concentration via Qubit using Broad Range chemistry and pooling equal DNA product, and diluted to 8 pM before loading it onto a MiSeq Flow Cell.'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 8
@@ -98,8 +98,7 @@ demux_max_mismatch: '0'
   
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
-| 1.0.0 | 2025-05-01 | Initial release |
-| 1.1.0 | 2026-01-26 | Formatting revisions, grammatical/spelling corrections, and updated external links |
+| 1.0.0 | 2026-01-27 | Initial release |
 
 ### Acronyms and Abbreviations
 
@@ -113,19 +112,16 @@ demux_max_mismatch: '0'
 |EtOH| Ethanol|
 |IDT| Integrated DNA Technologies|
 |HT1| Hybridization buffer|
-|MBARI| Monterey Bay Aquarium Research Institute|
-|MBON	|Marine Biodiversity Observation Network|
 |NOAA|National Oceanic and Atmospheric Administration|
 |NTC|No template control|
 |OME	|Ocean Molecular Ecology|
 |OSU CQLS| Oregon State University Center for Quantitative Life Sciences Genomics Core|
 |PCR| Polymerase chain reaction |
-|PMEL	|Pacific Marine Environmental Laboratory|
-|PPE    | Personal protective equipment |
+|PMEL |Pacific Marine Environmental Laboratory|
+|PPE | Personal protective equipment |
 |RSB| Resuspension buffer |
-|UW| University of Washington|
 | UDI | Unique Dual Index |
-|WC-OBON|West Coast Ocean Biomolecular Observing Network|
+|UW| University of Washington|
 
 ### Glossary
 
@@ -140,17 +136,15 @@ demux_max_mismatch: '0'
 
 This protocol is used by [Oregon State University Center for Quantitative Life Sciences Genomics Core](https://cqls.oregonstate.edu/core/genomics) to prepare next-generation amplicon/metabarcoding sequencing libraries from OSU CQLS generated PCR products. This standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple samples, enabling 96 total libraries to be sequenced on a single MiSeq run.
 
-### Method description and rationale
+### Method Description and Rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted DNA extractions and PCR amplification (see our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and PCR amplified and then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using an Ampure XP bead cleanup protocol. Cleaned PCR2 product is then quantified via QuBit BR flurometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using an Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR flurometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
-This protocol is less detailed than our typical protocols, as we do not conduct this protocol ourselves. 
-
-### Spatial coverage and environment(s) of relevance
+### Spatial Coverage and Environment(s) of Relevance
 
 This protocol can be used for library preparation of any marker gene region of any eDNA or bulk biological sample.
 
-## PERSONNEL REQUIRED
+## Personnel Required
 
 One person with molecular biology experience.
 
@@ -158,23 +152,25 @@ One person with molecular biology experience.
 
 This protocol uses bleach and ethanol, both of which are classified as hazardous chemicals. Appropriate PPE must be worn, and standard safety procedures should be followed to avoid skin and eye exposure.
 
-### Training requirements
+### Training Requirements
 
 Molecular biology training (including, at a minimum, sterile technique, pipetting small volumes, and programming and running PCR thermocyclers) is required to conduct this protocol.
 
-### Time needed to execute the procedure
+### Time Required to Execute the Procedure
 
-This protocol takes about 4-5 hours to execute per plate. There is a safe-stopping point after the PCR Amplicon Cleanup, Indexing PCR, Normalization, and Pooling steps. Across all stopping points, the plate can be stored for up to a week at 4°C, with storage at -20˚C for up to 6 months.
+This protocol takes about 4-5 hours to execute per single 96-well plate. There is a safe-stopping point after the PCR Amplicon Cleanup, Indexing PCR, Normalization, and Pooling steps. Across all stopping points, the plate can be stored for up to a week at 4°C, with storage at -20˚C for up to 6 months.
 
 ## EQUIPMENT
+
+For a 96-well plate:
 
 | DESCRIPTION | PRODUCT NAME AND MODEL | MANUFACTURER | QUANTITY | REMARK |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **Durable equipment** |
 | Thermal cycler | Mastercycler nexus thermal cycler | Eppendorf | 1 | Can be substituted with generic |
 | Vortex | Vortex genie | Scientific Industries | 1 | Can be substituted with generic |
-| PCR plate centrifuge | Microplate centrifuge | Generic | 1 | Can be substituted with generic |
-| Mag stand | 96-Well Magnetic Separator | Generic | 1 | Can be substituted with generic |
+| PCR plate centrifuge | Microplate centrifuge | Generic | 1 | |
+| Mag stand | 96-Well magnetic separator | Generic | 1 | |
 | Pipettor: 0.5-10 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 100-1000 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 10-100 μl |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
@@ -184,7 +180,7 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Ice bucket | Generic | Generic | 1 | |
 | QuBit | Qubit 4 Fluorometer | Invitrogen | 1 | Can be substituted with different Qubit model. |
 | **Consumable equipment** |
-| 96-well PCR plate | Armadillo PCR plate, 96-well, clear wells | ThermoFisher | 1 | Can be substituted with generic. |
+| 96-well PCR plate | Armadillo PCR plate, 96-well, clear wells | ThermoFisher | 2 | Can be substituted with generic. |
 | Aluminum foil sealing tape | AlumaSeal II sealing foils for PCR and cold storage | VWR | 7 | Can be substituted with generic. | 
 | 8-Strip tubes | 0.2 mL 8-strip PCR tubes | Generic | 5 |  |
 | Microcentrifuge tubes | 2.0 mL microcentrifuge tube | Generic | 8 | |
@@ -194,18 +190,18 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Gloves | Nitrile gloves | Generic | 1 box | |
 | Kimwipes | Delicate task wipes | KimTech | 1 box | Can be substituted with generic; must be lint-free. |
 | **Chemicals** |
-| 80% Ethanol | Molecular biology grade ethanol |
+| 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
 | PCR grade water| Molecular biology grade water |
-| 10 mM Tris pH 8.5 | Molecular biology grade Tris solution |
-| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | ___ μl per plate | |
-| Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | ___ μl per plate||
+| 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
+| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 40 μl per plate | |
+| Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μl per plate||
 | Illumina XT Indexes Sets A, B, C, D | Illumina Nextera XT Indexes| Illumina | 1 | Nextera XT Index Kit v2 Set A (96 Indexes, 384 Samples) FC-131-2001; Nextera XT Index Kit v2 Set B (96 Indexes, 384 Samples) FC-131-2002; Nextera XT Index Kit v2 Set C (96 Indexes, 96 Samples) FC-131-2003; Nextera XT Index Kit v2 Set D (96 Indexes, 384 Samples) FC-131-2004 |
-| 2x KAPA HiFi HotStart ReadyMix | Premixed 2X solution of Taq DNA Polymerase, dNTPs, and Reaction Buffer | Roche | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer (Cat_No: 07958927001) |
+| 2x KAPA HiFi HotStart ReadyMix | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer | Roche | 1 kit | |
 | Qybit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
-| MiSeq Reagent Kit v.3 (600-cycle)  | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System. | Illumina | 1 | (flow cell) Cat_No:MS-102-3003 |
-| PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 | (tube) (10ul of 10nM template solution) Cat_No:FC‐110‐3001 |
-| 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 1 | (mL) |
-| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | Buffered Tween needed for denaturing DNA | General lab supplier | 1 | (mL) |
+| MiSeq Reagent Kit v.3 (600-cycle) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System | Illumina | 1 flow cell | |
+| PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 tube | |
+| 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 10 μl per plate|  |
+| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | Buffered Tween needed for denaturing DNA | General lab supplier | 1 mL | |
 
 ## STANDARD OPERATING PROCEDURE
 
@@ -346,7 +342,7 @@ For metagenomics samples, >100,000 reads per sample is sufficient to fully surve
 Sample library pools were denatured and sequenced on an Illumina MiSeq (San Diego, CA) at OSU CDLS using the Illumina MiSeq Reagent Kit v.3 (600-cycle) following the "Illumina 16S Metagenomic Sequencing Library Preparation" guide. Specifically, libraries were diluted to 8 pM and run with 10% PhiX.
 
 ##### Preparation
-1. Turn on 1.7 mL heat block and set to 96°C.
+1. Turn on heat block and set to 96°C.
 2. Thaw MiSeq reagent cartridge at room temperature.
 3. Create ice-water bath using 3:1 ice to water ratio.
 
