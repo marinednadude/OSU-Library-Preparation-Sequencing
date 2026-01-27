@@ -1,5 +1,5 @@
 # OSU-Library-Preparation-Sequencing
-OSU Library Preparation &amp; Sequencing
+NOTE: This is NOT THE RECOMMENDED library prep and sequencing protocol for the OME group. For the standard protocol, see https://github.com/marinednadude/Jonah-Ventures-Library-Preparation/tree/main.
 
 [![DOI]()]()
 
