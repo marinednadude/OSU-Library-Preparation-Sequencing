@@ -195,7 +195,7 @@ For a 96-well plate:
 | 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
 | 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
 | 2x KAPA HiFi HotStart ReadyMix | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer | Roche | 2600 μl per plate | |
-| Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μl per plate||
+| Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μl per plate||
 | Forward primer | Custom oligo | IDT |520 μl per plate | Store at -20°C|
 | Reverse primer| Custom oligo | IDT | 520 μl per plate| Store at -20°C |
 | Qubit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
