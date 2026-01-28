@@ -145,7 +145,7 @@ Advantages to this protocol include ease of use, leveraging commercially availab
 
 This protocol can be used for library preparation of any marker gene region of any eDNA or bulk biological sample.
 
-## Personnel Required
+### Personnel Required
 
 One person with molecular biology experience.
 
