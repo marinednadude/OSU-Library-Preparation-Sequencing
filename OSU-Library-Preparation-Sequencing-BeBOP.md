@@ -12,7 +12,7 @@ target: 'amplicon sequencing assay [OBI_0002767]'
 creator: 'Shannon Brown, Samantha Setta, Zachary Gold, Sean McAllister'
 materials_required: 'vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]'
 skills_required: 'sterile technique, pipetting skills, standard molecular technique'
-time_required: 300
+time_required: 300 - Are units necessary here?
 personnel_required: 1
 language: en
 issued: '2026-01-27'
@@ -139,7 +139,7 @@ This protocol is used by [Oregon State University Center for Quantitative Life S
 
 ### Method Description and Rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using Ampure XP beads. Cleaned PCR2 product is then quantified via QuBit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using Ampure XP beads. Cleaned PCR2 product is then quantified via Qubit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 ### Spatial Coverage and Environment(s) of Relevance
 
@@ -179,7 +179,7 @@ For a 96-well plate:
 | Multi-channel pipettor: 0.5-10 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Serological pipette | Easypet 3 pipette | Eppendorf | 1 | Can be substituted with any accurate pipette.|
 | Ice bucket | Generic | Generic | 1 | |
-| QuBit | Qubit 4 Fluorometer | Invitrogen | 1 | Can be substituted with different Qubit model. |
+| Qubit | Qubit 4 Fluorometer | Invitrogen | 1 | Can be substituted with different Qubit model. |
 | **Consumable equipment** |
 | 96-well PCR plate | Armadillo PCR plate, 96-well, clear wells | ThermoFisher | 2 | Can be substituted with generic. |
 | Aluminum foil sealing tape | AlumaSeal II sealing foils for PCR and cold storage | VWR | 7 | Can be substituted with generic. | 
@@ -226,7 +226,7 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 4. Add 20 µl of beads to each PCR1 product using a multichannel pipette. Change tips between columns.
 5. Mix by aspirating and expelling 10 times.
 6. Incubate on the lab bench for 5 minutes.
-7. Place the plate on a magnetic plate for 2 minutes or until the supernatant has cleared.
+7. Place the PCR1 plate on a magnetic plate for 2 minutes or until the supernatant has cleared.
 8. Keep PCR1 plate on the magnetic plate and remove and discard the supernatant using a multichannel pipette. Change tips between samples.
 9. Keep PCR1 plate on the magnetic plate and add 200 µl of freshly prepared 80% EtOH to each sample well using a multichannel pipette.
 10. Incubate on magnetic plate for 30 seconds.
@@ -283,7 +283,7 @@ This table breaks down the mixture per plate and per reaction. When running full
 *Note: When possible, PCR set-up should be carried out in a separate pre-PCR space that is distinct from the post-PCR space where thermocyclers are located and all post-PCR processing is performed. No equipment, consumables, or reagents should be shared between pre- and post-PCR spaces with a unidirectional flow of sample processing. This step is post-PCR and thus should occur in the post-PCR spaces.*
 
 1. Set out Illumina Nextera XT primers and samples to thaw.
-2. Vortex and spin down thawed samples, primers, and nuclease-free water. Then tap/flick Kapa Master Mix rather than vortexing before spinning down. Thawed reagents should be stored in a cooling block or fridge when not in use.
+2. Vortex and spin down thawed samples, primers, and nuclease-free water. Then tap/flick KAPA HiFi HotStart ReadyMix rather than vortexing before spinning down. Thawed reagents should be stored in a cooling block or fridge when not in use.
 3. Pool reagents to make the final master mix, as denoted above in the reagent mixture table.
 4. Set out the template DNA to thaw if frozen.
 5. Aliquot 45 μL of final master mix into each well of the PCR plate. The plate should sit in a cold block to ensure the reagents remain at a low temperature.
@@ -301,7 +301,7 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 4. Add **56** µl of beads to each PCR2 product using a multichannel pipette. Change tips between columns.
 5. Mix by aspirating and expelling 10 times.
 6. Incubate on the lab bench for 5 minutes.
-7. Place the plate on a magnetic plate for 2 minutes or until the supernatant has cleared.
+7. Place the PCR2 plate on a magnetic plate for 2 minutes or until the supernatant has cleared.
 8. Keep PCR2 plate on the magnetic plate and remove and discard the supernatant using a multichannel pipette. Change tips between samples.
 9. Keep PCR2 plate on the magnetic plate and add 200 µl of freshly prepared 80% ethanol to each sample well using a multichannel pipette.
 10. Incubate on magnetic plate for 30 seconds.
@@ -353,7 +353,7 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 2. Set aside the remaining 0.2 N NaOH dilution for PhiX. (Use within 12 hours)
 3. Briefly vortex the sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
 4. Incubate at room temperature for 5 minutes.
-5. Combine 10 µL Denatured DNA with 990 µL pre-chilled Hybridization buffer (HT1) to generate a 20 pM denatured library in 1mM NAOH.
+5. Combine 10 µL Denatured DNA with 990 µL pre-chilled Hybridization buffer (HT1) to generate a 20 pM denatured library in 1mM NaOH.
 6. Place denatured DNA on ice.
 
 ##### Dilute Denatured DNA
