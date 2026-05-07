@@ -18,7 +18,7 @@ language: en
 issued: '2026-05-07'
 audience: scientists
 publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
-hasVersion: 1.0.0
+hasVersion: 1.1.0
 license: 'CC0 1.0 Universal'
 maturity level: mature
 
@@ -180,6 +180,7 @@ For a 96-well plate:
 | Multi-channel pipettor: 0.5-10 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Serological pipette | Easypet 3 pipette | Eppendorf | 1 | Can be substituted with any accurate pipette.|
 | Ice bucket | Generic | Generic | 1 | |
+| Heatshaker | Fisherbrand incubating mini-shaker | Fisher Scientific | 1 | Can be substituted with generic; hot bath not recommend for sterility reasons. |
 | Qubit | Qubit 4 Fluorometer | Invitrogen | 1 | Can be substituted with different Qubit model. |
 | **Consumable equipment** |
 | 96-well PCR plate | Armadillo PCR plate, 96-well, clear wells | ThermoFisher | 2 | Can be substituted with generic. |
@@ -192,7 +193,7 @@ For a 96-well plate:
 | Gloves | Nitrile gloves | Generic | 1 box | |
 | Kimwipes | Delicate task wipes | KimTech | 1 box | Can be substituted with generic; must be lint-free. |
 | **Chemicals** |
-| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 40 μl per plate | |
+| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 80 μl per plate | |
 | 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
 | 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
 | KAPA HiFi HotStart ReadyMix | 2x KAPA HiFi HotStart ReadyMix | Roche | 2600 μl per plate | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer|
@@ -201,10 +202,11 @@ For a 96-well plate:
 | Reverse primer| Custom oligo | IDT | 520 μl per plate| Store at -20°C |
 | Qubit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
 | Illumina XT Indexes Sets A, B, C, D | Illumina Nextera XT Indexes| Illumina | 1 | Nextera XT Index Kit v2 Set A (96 Indexes, 384 Samples) FC-131-2001; Nextera XT Index Kit v2 Set B (96 Indexes, 384 Samples) FC-131-2002; Nextera XT Index Kit v2 Set C (96 Indexes, 96 Samples) FC-131-2003; Nextera XT Index Kit v2 Set D (96 Indexes, 384 Samples) FC-131-2004 |
-| MiSeq Reagent Kit v.3 (600-cycle) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System | Illumina | 1 flow cell | |
-| PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 tube | |
-| 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 10 μl per plate|  |
-| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | Buffered Tween needed for denaturing DNA | General lab supplier | 1 mL | |
+| Illumina MiSeq Reagent Kit | MiSeq Reagent Kit v.3 (600-cycle) | Illumina | 1 flow cell | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System |
+| PhiX | PhiX Control v3 | Illumina | 1 tube | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 300 base pairs. |
+| HT1 Buffer | Hybridization Buffer | Illumina | 1 tube | Reagent for diluting denatured libraries and the PhiX control library before Illumina sequencing |
+| 0.2 N NaOH | 1 N NaOH, molecular biology grade | General lab supplier | 10 μl per plate| Dilute to 0.2 NaOH for denaturing DNA |
+| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | General lab supplier | 1 mL | Buffered Tween needed for denaturing DNA |
 
 ## STANDARD OPERATING PROCEDURE
 
@@ -258,7 +260,7 @@ This step attaches dual indices and Illumina sequencing adapters using the Nexte
 
 | Reagent |Volume (μL) per plate| Volume (μL) per reaction | Intial concentration| Final concentration|
 | ----- | ----- | ----- |----- |----- |
-| 2x Qubit HiFi HotStart ReadyMix |2600| 25 |100% |50% |
+| 2x KAPA HiFi HotStart ReadyMix |2600| 25 |100% |50% |
 | Forward Primer |520| 5 |10 μM |0.5 μM |
 | Reverse Primer |520| 5 |10 μM | 0.5 μM |
 | Nuclease-Free Water |1040|10 | N/A|N/A |
@@ -305,7 +307,7 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 7. Place the PCR2 plate on a magnetic separator for 2 minutes or until the supernatant has cleared.
 8. Keep PCR2 plate on the magnetic separator and remove and discard the supernatant using a multichannel pipette. Change tips between samples.
 9. Keep PCR2 plate on the magnetic separator and add 200 µl of freshly prepared 80% ethanol to each sample well using a multichannel pipette.
-10. Incubate on magnetic separator for 30 seconds.
+10. Incubate on the magnetic separator for 30 seconds.
 11. Carefully remove and discard the ethanol supernatant.
 10. Repeat steps 9-11, performing a second ethanol wash.
 11. Use a P20 multichannel pipette with fine pipette tips to remove excess ethanol.
@@ -342,7 +344,7 @@ For metagenomics samples, >100,000 reads per sample is sufficient to fully surve
 
 ### Sequencing
 
-Sample library pools were denatured and sequenced on an Illumina MiSeq (San Diego, CA) at OSU CDLS using the Illumina MiSeq Reagent Kit v.3 (600-cycle) following the "Illumina 16S Metagenomic Sequencing Library Preparation" guide. Specifically, libraries were diluted to 8 pM and run with 10% PhiX.
+Sample library pools were denatured and sequenced on an Illumina MiSeq (San Diego, CA) at OSU CDLS using the Illumina MiSeq Reagent Kit following the "Illumina 16S Metagenomic Sequencing Library Preparation" guide. Specifically, libraries were diluted to 8 pM and run with 10% PhiX.
 
 ##### Preparation
 1. Turn on the heat block and set it to 96°C.
@@ -354,21 +356,21 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 2. Set aside the remaining 0.2 N NaOH dilution for PhiX. (Use within 12 hours)
 3. Briefly vortex the sample solution. Then centrifuge at 280 × g for 1 minute at room temperature.
 4. Incubate at room temperature for 5 minutes.
-5. Combine 10 µL Denatured DNA with 990 µL pre-chilled Hybridization buffer (HT1) to generate a 20 pM denatured library in 1mM NaOH.
+5. Combine 10 µL Denatured DNA with 990 µL pre-chilled HT1 Buffer to generate a 20 pM denatured library in 1 mM NaOH.
 6. Place denatured DNA on ice.
 
 ##### Dilute Denatured DNA
-1. Add 240 µL 20 pM denatured library to 360 µL pre-chilled HT1 to make 8 pM final concentration denatured DNA library.
+1. Add 240 µL 20 pM denatured library to 360 µL pre-chilled HT1 Buffer to make 8 pM final concentration denatured DNA library.
 2. Briefly mix (flick/tap/invert) and spin the sample
 3. Place the final denatured library on ice.
 
-##### Denature and Dilution of PhiX Control
+##### Denature and Dilution of PhiX Control v3
 1. Add 2 μl 10 nM PhiX library to 3 µL 10 mM Tris pH 8.5 in a new microcentrifuge tube to make a 4nM PhiX library
 2. Add 5 µL 4 nM PhiX library to 5µL 0.2 N NaOH to make a 2 nM PhiX library solution
 3. Briefly vortex and spin
 4. Incubate at room temperature for 5 minutes.
-5. Combine 10µL denatured PhiX with 990 µL pre-chilled HT1 to generate a 20 pM denatured PhiX library in 1 mM NaOH.
-6. Add 240 µL 20 pM denatured PhiX library to 360 µL pre-chilled HT1 to make 8 pM final concentration denatured PhiX library.
+5. Combine 10µL denatured PhiX with 990 µL pre-chilled HT1 Buffer to generate a 20 pM denatured PhiX library in 1 mM NaOH.
+6. Add 240 µL 20 pM denatured PhiX library to 360 µL pre-chilled HT1 Buffer to make 8 pM final concentration denatured PhiX library.
 7. Briefly mix (flick/tap/invert) and spin the sample.
 8. Place the final denatured library on ice.
 
