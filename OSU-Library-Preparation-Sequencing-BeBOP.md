@@ -18,7 +18,7 @@ language: en
 issued: '2026-05-07'
 audience: scientists
 publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
-hasVersion: 1.1.0
+hasVersion: 1.0.0
 license: 'CC0 1.0 Universal'
 maturity level: mature
 
@@ -98,8 +98,7 @@ demux_max_mismatch: '0'
   
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
-| 1.0.0 | 2026-01-27 | Initial release |
-| 1.1.0 | 2025-05-07 | Revised acronyms and glossary, corrected formatting issues, and updated content |
+| 1.0.0 | 2026-05-07 | Initial release |
 
 ### Acronyms and Abbreviations
 
@@ -140,7 +139,7 @@ This protocol is used by [Oregon State University Center for Quantitative Life S
 
 ### Method Description and Rationale
 
-Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected prior to 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using Ampure XP beads. Cleaned PCR2 product is then quantified via Qubit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits. This protocol's steps include: _PCR1 Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR2 Amplicon Cleanup_, _Library Quantification, Normalization, Pooling, and Final Size Selection_, and _Sequencing_. For samples collected before 2021, NOAA PMEL OME conducted eDNA sample collection and filtration. OSU CQLS conducted [DNA extractions](https://github.com/McAllister-NOAA/OSU-Extraction_Protocol/blob/main/OSU_Extraction_Protocol.md) and PCR amplificiation for [Parada 16S](https://github.com/marinednadude/OSU-Parada-universal-16S-PCR/blob/main/NOAA-PMEL-OME-OSU-Parada-universal-16S-PCR-Protocol-BeBOP.md) and [Machida 18S](https://github.com/marinednadude/OSU-Machida-metazoan-18S-V8-PCR/blob/main/NOAA-PMEL-OME-OSU-Machida-Metazoan-18S-V8-PCR-Protocol-BeBOP.md). Sterivexes were shipped on dry ice to OSU CQLS in Corvallis, OR, USA where they were extracted and amplified, then processed using this protocol. PCR1 product was first cleaned to remove excess primers, dNTPs, and primer dimer using an Ampure XP bead cleanup protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera XT combinatorial indices. Indexed PCR product is then cleaned again using Ampure XP beads. Cleaned PCR2 product is then quantified via Qubit BR fluorometry and normalized and pooled by even total DNA copy numbers into a final pooled library. The library is then sequenced on an Illumina MiSeq at the OSU CQLS using the MiSeq Reagent Kit v.3 (600-cycle). The sequencing core demultiplexes raw sequence data, and downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 ### Spatial Coverage and Environment(s) of Relevance
 
@@ -173,10 +172,10 @@ For a 96-well plate:
 | Vortex | Vortex genie | Scientific Industries | 1 | Can be substituted with generic |
 | PCR plate centrifuge | Microplate centrifuge | Generic | 1 | |
 | Magnetic separator | 96-Well magnetic separator | Generic | 1 | |
-| Pipettor: 0.5-10 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
-| Pipettor: 100-1000 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
-| Pipettor: 10-100 μl |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
-| Multi-channel pipettor: 10-100 μl | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
+| Pipettor: 0.5-10 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
+| Pipettor: 100-1000 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
+| Pipettor: 10-100 μL |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
+| Multi-channel pipettor: 10-100 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Multi-channel pipettor: 0.5-10 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Serological pipette | Easypet 3 pipette | Eppendorf | 1 | Can be substituted with any accurate pipette.|
 | Ice bucket | Generic | Generic | 1 | |
@@ -193,20 +192,20 @@ For a 96-well plate:
 | Gloves | Nitrile gloves | Generic | 1 box | |
 | Kimwipes | Delicate task wipes | KimTech | 1 box | Can be substituted with generic; must be lint-free. |
 | **Chemicals** |
-| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 80 μl per plate | |
-| 80% Ethanol | Molecular biology grade ethanol | 800 μl per plate|
-| 10 mM Tris pH 8.5 | Molecular biology grade Tris solution | 90 μl per plate|
-| KAPA HiFi HotStart ReadyMix | 2x KAPA HiFi HotStart ReadyMix | Roche | 2600 μl per plate | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer|
-| Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μl per plate||
-| Forward primer | Custom oligo | IDT |520 μl per plate | Store at -20°C|
-| Reverse primer| Custom oligo | IDT | 520 μl per plate| Store at -20°C |
+| AMPure XP beads  | AMPure XP bead-based reagent | Beckman Coulter Life Sciences | 80 μL per plate | |
+| 80% Ethanol | Molecular biology grade ethanol | 800 μL per plate|
+| 10 mM Tris pH 8.5 | 10 mM Tris pH 8.5, Molecular biology grade | 90 μL per plate|
+| KAPA HiFi HotStart ReadyMix | 2x KAPA HiFi HotStart ReadyMix | Roche | 2600 μL per plate | Premixed 2X solution of Taq DNA Polymerase, dNTPs, MgCl2, and Reaction Buffer|
+| Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1040 μL per plate||
+| Forward primer | Custom oligo | IDT |520 μL per plate | Store at -20°C|
+| Reverse primer| Custom oligo | IDT | 520 μL per plate| Store at -20°C |
 | Qubit reagents | Qubit dsDNA BR Assay Kit | Invitrogen | 1 | |
 | Illumina XT Indexes Sets A, B, C, D | Illumina Nextera XT Indexes| Illumina | 1 | Nextera XT Index Kit v2 Set A (96 Indexes, 384 Samples) FC-131-2001; Nextera XT Index Kit v2 Set B (96 Indexes, 384 Samples) FC-131-2002; Nextera XT Index Kit v2 Set C (96 Indexes, 96 Samples) FC-131-2003; Nextera XT Index Kit v2 Set D (96 Indexes, 384 Samples) FC-131-2004 |
 | Illumina MiSeq Reagent Kit | MiSeq Reagent Kit v.3 (600-cycle) | Illumina | 1 flow cell | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 600-cycle run on the MiSeq System |
 | PhiX | PhiX Control v3 | Illumina | 1 tube | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 300 base pairs. |
 | HT1 Buffer | Hybridization Buffer | Illumina | 1 tube | Reagent for diluting denatured libraries and the PhiX control library before Illumina sequencing |
-| 0.2 N NaOH | 1 N NaOH, molecular biology grade | General lab supplier | 10 μl per plate| Dilute to 0.2 NaOH for denaturing DNA |
-| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | General lab supplier | 1 mL | Buffered Tween needed for denaturing DNA |
+| 0.2 N NaOH | 1 N NaOH, molecular biology grade | General lab supplier | 10 μL per plate| Dilute to 0.2 NaOH for denaturing DNA |
+| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | General lab supplier | 1 mL | Buffered Tween needed for PhiX Controls |
 
 ## STANDARD OPERATING PROCEDURE
 
@@ -226,22 +225,22 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 1. Centrifuge PCR1 plate at 1,000 × g at 20°C for 1 minute.
 3. Vortex AMPure XP beads for 30 seconds. 
 4. Add an appropriate volume of beads to a disposable well, depending on the quantity of samples to be processed.
-4. Add 20 µl of beads to each PCR1 product using a multichannel pipette. Change tips between columns.
+4. Add 20 μL of beads to each PCR1 product using a multichannel pipette. Change tips between columns.
 5. Mix by aspirating and expelling 10 times.
 6. Incubate on the lab bench for 5 minutes.
 7. Place the plate on a magnetic separator for 2 minutes or until the supernatant has cleared.
 8. Keep the PCR1 plate on the magnetic separator and remove and discard the supernatant using a multichannel pipette. Change tips between samples.
-9. Keep the PCR1 plate on the magnetic separator and add 200 µl of freshly prepared 80% EtOH to each sample well using a multichannel pipette.
+9. Keep the PCR1 plate on the magnetic separator and add 200 μL of freshly prepared 80% EtOH to each sample well using a multichannel pipette.
 10. Incubate on the magnetic separator for 30 seconds.
 11. Carefully remove and discard the EtOH supernatant.
 12.  Repeat steps 9-11, performing a second ethanol wash.
 13. Use a P20 multichannel pipette with fine pipette tips to remove excess EtOH.
 14. Air‐dry samples for 10 minutes, keeping the PCR1 plate on the magnetic bead stand.
-15. Remove the PCR1 plate from the magnetic stand and then add 52.5 µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
+15. Remove the PCR1 plate from the magnetic stand and then add 52.5 μL of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
 16. Mix by aspirating and expelling 10 times.
 17. Incubate at room temperature for 2 minutes.
 18. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
-19. Transfer 50 µl of the supernatant from the PCR1 plate to a new labeled 96‐well PCR plate.
+19. Transfer 50 μL of the supernatant from the PCR1 plate to a new labeled 96‐well PCR plate.
 
 This is a safe stopping point. Plates can be sealed and stored at 4°C for up to a week.
 
@@ -301,22 +300,22 @@ Before starting this procedure, remove the AMPure XP beads from the fridge and a
 1. Centrifuge PCR2 plate at 1,000 × g at 20°C for 1 minute.
 3. Vortex AMPure XP beads for 30 seconds. 
 4. Add an appropriate volume of beads to a disposable well, depending on the quantity of samples to be processed.
-4. Add **56** µl of beads to each PCR2 product using a multichannel pipette. Change tips between columns.
+4. Add **56** μL of beads to each PCR2 product using a multichannel pipette. Change tips between columns.
 5. Mix by aspirating and expelling 10 times.
 6. Incubate on the lab bench for 5 minutes.
 7. Place the PCR2 plate on a magnetic separator for 2 minutes or until the supernatant has cleared.
 8. Keep PCR2 plate on the magnetic separator and remove and discard the supernatant using a multichannel pipette. Change tips between samples.
-9. Keep PCR2 plate on the magnetic separator and add 200 µl of freshly prepared 80% ethanol to each sample well using a multichannel pipette.
+9. Keep PCR2 plate on the magnetic separator and add 200 μL of freshly prepared 80% ethanol to each sample well using a multichannel pipette.
 10. Incubate on the magnetic separator for 30 seconds.
 11. Carefully remove and discard the ethanol supernatant.
 10. Repeat steps 9-11, performing a second ethanol wash.
 11. Use a P20 multichannel pipette with fine pipette tips to remove excess ethanol.
 11. Air‐dry samples for 10 minutes, keeping the PCR2 plate on the magnetic bead stand.
-12. Remove the PCR2 plate from the magnetic stand and then add **27.5** µl of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
+12. Remove the PCR2 plate from the magnetic stand and then add **27.5** μL of 10 mM Tris pH 8.5 to each well using a multichannel pipette.
 13. Mix by aspirating and expelling 10 times.
 14. Incubate at room temperature for 2 minutes.
 15. Place the plate on the magnetic stand for 2 minutes or until the supernatant has cleared.
-16. Transfer 50 µl of the supernatant from the PCR2 plate to a new labeled 96‐well PCR plate.
+16. Transfer 50 μL of the supernatant from the PCR2 plate to a new labeled 96‐well PCR plate.
 
 This is a safe stopping point. Plates can be sealed and stored at ‐20°C for up to a week.
 
@@ -331,13 +330,13 @@ This is a safe stopping point. Plates can be sealed and stored at ‐20°C for u
 	Example:
 	15ng/µL/(660 g/mol * 500 bp) = 45 nM
 
-3. Dilute library in resuspension buffer (RSB) or 10 mM Tris pH 8.5 to 4 nM.
+3. Dilute the library in 10 mM Tris pH 8.5 to 4 nM.
 
 **Pooling and Size Selection**
 
 1. Pool 5 µL of each uniquely tagged library into a microcentrifuge tube for the final cleaned pool. Vortex and spin.
 
-The Machida marker resulted in primer dimer (shorter 170bp peak) with main target ~500bp. From NorsemanWOAC_Pool1 (OSU876/OSU1034, DY20-12 cruise), primer dimer was removed with a by BluePippin size selection. For Norseman18S Pool2 (OSU1089, NO20-01 cruise) and Axial 2020 cruise, an additional AMPure XP magnetic bead cleanup was conducted instead of utilizing the entire pool (See above).
+The Machida marker resulted in primer dimer (shorter 170bp peak) with the main target ~500 bp. From NorsemanWOAC_Pool1 (OSU876/OSU1034, DY20-12 cruise), primer dimer was removed with a by BluePippin size selection. For Norseman18S Pool2 (OSU1089, NO20-01 cruise) and Axial 2020 cruise, an additional AMPure XP magnetic bead cleanup was conducted instead of utilizing the entire pool (See above).
 
 ### Quality control
 For metagenomics samples, >100,000 reads per sample is sufficient to fully survey the bacterial composition. This number of reads allows for sample pooling to the maximum level of 96 libraries, given the MiSeq output of > 20 million reads. Theoretically, on a perfect MiSeq run, up to 125 samples for a single marker could be sequenced at once.
@@ -365,7 +364,7 @@ Sample library pools were denatured and sequenced on an Illumina MiSeq (San Dieg
 3. Place the final denatured library on ice.
 
 ##### Denature and Dilution of PhiX Control v3
-1. Add 2 μl 10 nM PhiX library to 3 µL 10 mM Tris pH 8.5 in a new microcentrifuge tube to make a 4nM PhiX library
+1. Add 2 μL 10 nM PhiX library to 3 µL 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 in a new microcentrifuge tube to make a 4 nM PhiX library
 2. Add 5 µL 4 nM PhiX library to 5µL 0.2 N NaOH to make a 2 nM PhiX library solution
 3. Briefly vortex and spin
 4. Incubate at room temperature for 5 minutes.
